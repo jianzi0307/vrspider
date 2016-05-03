@@ -14,6 +14,9 @@ BOT_NAME = 'vrspider'
 SPIDER_MODULES = ['vrspider.spiders']
 NEWSPIDER_MODULE = 'vrspider.spiders'
 
+FEED_URI = u'vrsprider.csv'
+FEED_FORMAT = 'CSV'
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'vrspider (+http://www.yourdomain.com)'
