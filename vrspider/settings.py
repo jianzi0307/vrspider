@@ -64,9 +64,9 @@ FEED_FORMAT = 'CSV'
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'vrspider.pipelines.SomePipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'vrspider.pipelines.VrspiderPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -86,3 +86,5 @@ FEED_FORMAT = 'CSV'
 #HTTPCACHE_DIR='httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES=[]
 #HTTPCACHE_STORAGE='scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+DEPTH_LIMIT = 10

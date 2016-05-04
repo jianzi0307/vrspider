@@ -2,18 +2,17 @@
 from scrapy.spiders import CrawlSpider
 from scrapy.http import Request
 from scrapy.selector import Selector
-from vrspider.items import VrspiderItem
+from vrspider.items import VrListItem
+from vrspider.items import VrContentItem
 import time
 
 class VR(CrawlSpider):
     name = 'VR'
     start_urls = [
         'http://www.leiphone.com/category/jingdu/page/1',
-        'http://www.leiphone.com/category/jingdu/page/2',
-        'http://www.leiphone.com/category/jingdu/page/3',
     ]
     def parse(self, response):
-        item = VrspiderItem()
+        item = VrListItem()
         selector = Selector(response)
         Infos = selector.xpath('//div[@class="artSortList-main lph-main clr"]/div[@class="inner"]/div[@class="artSortList-left lph-left category-list"]/div[@class="lph-pageList index-pageList"]/div[@class="wrap"]/ul/li')
         for info in Infos:

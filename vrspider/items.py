@@ -7,8 +7,8 @@
 
 import scrapy
 
-
-class VrspiderItem(scrapy.Item):
+# 列表项
+class VrListItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     title = scrapy.Field()
@@ -18,3 +18,8 @@ class VrspiderItem(scrapy.Item):
     author = scrapy.Field()
     infotype = scrapy.Field()
     pass
+
+# 内容
+class VrContentItem(scrapy.Item):
+    pass
+
